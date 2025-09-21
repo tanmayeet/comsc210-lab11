@@ -23,17 +23,26 @@ void addVillager(vector<Villager>& villagers, string name, int friendshipLevel,
 void displayVillagers(const vector<Villager>& villagers) {
   for (const Villager& v : villagers) {
     cout << "Villager: " << v.name << endl;
-    cout
+    cout << "Friendship Level: " << v.friendshipLevel << endl;
+    cout << "Favorite Gifts: ";
+    for (const string& gift : v.favoriteGifts) {
+      cout << gift << ", ";
+    }
+    cout << endl << endl;
   }
 }
 
 int main() {
   vector<Villager> villagers;
 
-  addVillager(villagers, "Jodi", {})
+  addVillager(villagers, "Jodi", 8,
+              {"Chocolate Cake", "Crispy Bass", "Diamond"});
+  addVillager(villagers, "Linus", 10,
+              {"Blueberry Tart", "Cactus Fruit", "Yam"});
+  addVillager(villagers, "Robin", 7, {"Goat Cheese", "Peach", "Spaghetti"});
 
-      // Using the
-      displayVillagers(villagers);
+  // Using the
+  displayVillagers(villagers);
 
   return 0;
 }
