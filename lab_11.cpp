@@ -10,6 +10,11 @@ struct Villager {
   std::vector<std::string> favoriteGifts;  // Dynamic array of favorite gifts
 };
 
+// Function prototypes
+void addVillager(vector<Villager>& villagers, string name, int friendshipLevel,
+                 vector<string> gifts);
+void displayVillagers(const vector<Villager>& villagers);
+
 void addVillager(vector<Villager>& villagers, string name, int friendshipLevel,
                  vector<string> gifts) {
   Villager v;
