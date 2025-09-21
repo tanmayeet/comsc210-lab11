@@ -32,7 +32,7 @@ void addVillager(vector<Villager>& villagers, string name, int friendshipLevel,
       v);  // Adds a villager to the main list using the push_back iterator
 }
 
-// Function: Displays the contents of vector villagers for each attribut given
+// Function: Displays the contents of vector villagers for each attribute given
 //  Arguments used: const vector<Villager>& villagers
 //   Returns: nothing
 void displayVillagers(const vector<Villager>& villagers) {
@@ -59,6 +59,9 @@ void displayVillagers(const vector<Villager>& villagers) {
   }
 }
 
+// Function: Creates sample villagers and displays attributes
+// Arguments: none
+// Returns: 0
 int main() {
   // our vector villagers that contains Villager type objects
   vector<Villager> villagers;
