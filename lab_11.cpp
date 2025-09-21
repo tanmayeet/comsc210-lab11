@@ -16,4 +16,19 @@ void addVillager(vector<Villager>& villagers, string name, int friendshipLevel,
   v.name = name;
   v.friendshipLevel = friendshipLevel;
   v.favoriteGifts = gifts;
+  villagers.push_back(
+      v);  // Adds a villager to the main list using the push_back iterator
+}
+
+void displayVillagers() {}
+
+int main() {
+  vector<Villager> villagers;
+
+  addVillager(villagers, "Jodi", {})
+
+      // Using the
+      displayVillagers(villagers);
+
+  return 0;
 }
