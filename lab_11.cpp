@@ -1,3 +1,6 @@
+// COMSC-210 | Lab 11 | Tanmayee Chalamalasetti
+// IDE Used: VS Code
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -15,6 +18,7 @@ void addVillager(vector<Villager>& villagers, string name, int friendshipLevel,
                  vector<string> gifts);
 void displayVillagers(const vector<Villager>& villagers);
 
+// Function: Adds villager attributes to the vector
 void addVillager(vector<Villager>& villagers, string name, int friendshipLevel,
                  vector<string> gifts) {
   Villager v;
