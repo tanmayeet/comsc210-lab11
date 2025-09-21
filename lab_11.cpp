@@ -8,9 +8,9 @@ using namespace std;
 
 // This struct represents a Villager in the game Stardew Valley.
 struct Villager {
-  std::string name;                        // Villager's name
-  int friendshipLevel;                     // Friendship level from 0 to 10
-  std::vector<std::string> favoriteGifts;  // Dynamic array of favorite gifts
+  string name;                   // Villager's name
+  int friendshipLevel;           // Friendship level from 0 to 10
+  vector<string> favoriteGifts;  // Dynamic array of favorite gifts
 };
 
 // Function prototypes
@@ -18,9 +18,9 @@ void addVillager(vector<Villager>& villagers, string name, int friendshipLevel,
                  vector<string> gifts);
 void displayVillagers(const vector<Villager>& villagers);
 
-// Function: Adds villager attributes to the vector
+// Function: Adds villager attributes to the vector villagers
 // Arguments used: vector<Villager>& villagers, string name, int
-// friendshipLevel, vector<string> gifts
+//  friendshipLevel, vector<string> gifts
 //  Returns: nothing
 void addVillager(vector<Villager>& villagers, string name, int friendshipLevel,
                  vector<string> gifts) {
@@ -32,23 +32,35 @@ void addVillager(vector<Villager>& villagers, string name, int friendshipLevel,
       v);  // Adds a villager to the main list using the push_back iterator
 }
 
+// Function: Displays the contents of vector villagers for each attribut given
+//  Arguments used: const vector<Villager>& villagers
+//   Returns: nothing
 void displayVillagers(const vector<Villager>& villagers) {
-  // for each Villager given through addVillager, it prints out each attribute
   for (const Villager& v : villagers) {
     cout << "Villager: " << v.name << endl;  // displays the Villager's name
     cout << "Friendship Level: " << v.friendshipLevel
          << endl;  // displays the Villager's friendship level
     cout << "Favorite Gifts: ";
+
+    int count = 0;  // count for favorite gifts for loop
+    int total_gifts =
+        v.favoriteGifts.size();  // uses the size function to determine how many
+                                 // favorite gifts each Villager ha
     for (const string& gift :
          v.favoriteGifts) {  // uses a range-based for loop to displays favorite
-                             // giftsof each Villager
-      cout << gift << ", ";  // puts a comma in between
+                             // gifts of each Villager
+      cout << gift;
+      if (count < total_gifts - 1) {
+        cout << ", ";  // puts a comma in between
+      }
+      count++;
     }
-    cout << endl << endl;  // adds a new line between each villager
+    cout << endl;  // adds a new line between each villager
   }
 }
 
 int main() {
+  // our vector villagers that contains Villager type objects
   vector<Villager> villagers;
 
   // the three villagers we are adding to our vector
